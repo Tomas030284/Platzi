@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Rock, Paper ó Scissors</title>
+        <script>
+
+            function ranDom(min, max){
+                return Math.floor( Math.random() * (max - min + 1 ) + min  );   
+            }
+
+            // 1 es rock, 2 es paper, 3 es scissors
+            let player = 0;
+
+            let pc = ranDom(1,3);
+
+            player = prompt("Choose: 1 for Rock, 2 for Paper, 3 for Scissors");
+            
+            //Player
+            if (player == 1){
+                alert("You Choose 🪨");
+            }else if (player == 2) {
+                alert("You choose 📄 ");
+            }else if (player == 3){
+                alert("You choose ✂️");
+            }else{
+                alert("You choose LOSING");
+            }
+
+
+            //PC 
+            if (pc == 1){
+                alert("PC Chooses 🪨");
+            }else if (pc == 2) {
+                alert("PC Chooses 📄 ");
+            }else if (pc == 3){
+                alert("PC Chooses ✂️");
+            }
+
+            // Combat
+            if (pc == player){
+                alert("TIE");
+            }else if (player == 1 && pc == 3){
+                alert("YOU WIN");
+            }else if (player == 2 && pc == 1){
+                alert("YOU WIN");
+            }else if (player == 3 && pc == 2){
+                alert("YOU WIN");
+            }else{
+                alert("YOU LOSS");
+            }
+
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Rock, Paper ó Scissors</h1>
+    </body>
+
+</html>
